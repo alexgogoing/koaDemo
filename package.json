@@ -1,0 +1,27 @@
+{
+  "name": "koademo",
+  "version": "1.0.0",
+  "description": "-- personal test of koa",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgogoing/koaDemo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexgogoing/koaDemo/issues"
+  },
+  "homepage": "https://github.com/alexgogoing/koaDemo#readme",
+  "author": "jinxc",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
