@@ -1,12 +1,15 @@
 const Koa = require('koa');
-const app = new Koa();
+const logger = require('koa-logger');
 const config = require('./config');
 const router = require('./router');
 const result = require('./middleware/result');
-const upper = require('./middleware/upper');
+const error = require('./middleware/error');
 
+const app = new Koa();
+
+app.use(logger());
 //中间件应在app.use(router.routes())之前使用
-app.use(result('^/hello'), upper()); 
+app.use(error, result('^/hello'));  
 //此处也可以使用链式调用
 //app.use(result('^/hello')).use(upper());
 

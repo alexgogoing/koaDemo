@@ -1,12 +1,13 @@
 let helloService = require('../service/hello');
+let error = require('../model/error');
 
 exports.getUser = async (ctx, next) => {
     try{
-        let username = ctx.request.query.username;
+        let username = ctx.request.body.username;
         let result = await helloService.findUserData(username);
         ctx.body = result;
     }catch(e){
-        ctx.body = 'error'
+        ctx.throw(new error.NormalError());
     }
 }
 
