@@ -9,7 +9,7 @@ const app = new Koa();
 
 app.use(logger());
 //中间件应在app.use(router.routes())之前使用
-app.use(error, result('^/hello'));  
+app.use(error).use(result('^/hello'));
 //此处也可以使用链式调用
 //app.use(result('^/hello')).use(upper());
 

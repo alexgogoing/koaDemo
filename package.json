@@ -2,11 +2,7 @@
   "name": "koademo",
   "version": "1.0.0",
   "description": "-- personal test of koa",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./app.js"
-  },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexgogoing/koaDemo.git"
@@ -15,15 +11,27 @@
     "url": "https://github.com/alexgogoing/koaDemo/issues"
   },
   "homepage": "https://github.com/alexgogoing/koaDemo#readme",
+  "scripts": {
+    "test": "sudo NODE_ENV=test mocha",
+    "start": "sudo nodemon ./index.js"
+  },
   "author": "jinxc",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-register": "^6.26.0",
     "koa": "^2.6.2",
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
     "mysql": "^2.16.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.6"
   }
 }
