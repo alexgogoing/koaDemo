@@ -3,4 +3,4 @@ config.js
 /config
 package-lock.json
 /.vscode
-/.S_Store
+/.DS_Store
