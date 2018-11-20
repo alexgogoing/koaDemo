@@ -1,5 +1,5 @@
 # koaDemo
-## personal test of KOA
+## personal test ofKOA
 ## 暂时目标: 利用koa完成单点登录demo
 
 目前已完成功能：
