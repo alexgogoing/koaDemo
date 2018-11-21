@@ -17,7 +17,7 @@ let response_formatter = (ctx) => {
     }
 }
 
-let url_filter = function(pattern){
+export default function(pattern){
     console.log('使用 formatter');
 
     return async function(ctx, next){
@@ -30,5 +30,3 @@ let url_filter = function(pattern){
         }
     }
 }
-
-module.exports = url_filter;

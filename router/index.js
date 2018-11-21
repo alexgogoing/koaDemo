@@ -1,8 +1,9 @@
 /**
  * 最高层路由
  */
-let router = require('koa-router')();
+import koaRouter from 'koa-router';
 import helloController from '../app/controller/hello';
+let router = new koaRouter();
 
 router.get('/', async (ctx, next) => {
     console.log('访问根节点');
@@ -11,4 +12,4 @@ router.get('/', async (ctx, next) => {
 
 router.use(helloController.routes(), helloController.allowedMethods());
 
-module.exports = router;
+export default router;

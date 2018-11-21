@@ -1,4 +1,4 @@
-let upper = () => {
+export let upper = () => {
     return async (ctx, next) => {
         await next();
         console.log('upper 生效');
@@ -7,5 +7,3 @@ let upper = () => {
         }
     }
 }
-
-module.exports = upper;

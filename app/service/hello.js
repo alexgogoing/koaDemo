@@ -1,7 +1,12 @@
-const mysql = require('../../lib/mysql');
+import {query} from '../../lib/mysql';
 
 // 查找用户
-exports.findUserData = function(name){
-    let _sql = `select * from users where name="${name}";`
-    return mysql.query(_sql);
+export default {
+    findUserData: function(name){
+        let _sql = `select * from users where name="${name}";`
+        return query(_sql);
+    },
+    findUserName: function(){
+        console.log(1);
+    }
 }

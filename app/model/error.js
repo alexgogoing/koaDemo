@@ -8,7 +8,7 @@ const errCusArr = [{
     message: '这是第二种错误'
 }]
 
-exports.CustomError = class extends Error{
+export class CustomError extends Error{
     constructor(err_name, err_code, err_message){
         super();
         if(!err_name){
@@ -29,7 +29,7 @@ exports.CustomError = class extends Error{
     }
 }
 
-exports.NormalError = class extends Error{
+export class NormalError extends Error{
     constructor(){
         super();
         this.name = 'normal';

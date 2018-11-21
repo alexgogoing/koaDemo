@@ -1,12 +1,4 @@
-/**
- * 
- * 单元测试类
- */
-console.log('start');
-
-async function name(params){
-    console.log(params);
+function hello () {
+  console.log('Hello Eslint');
 }
-console.log('next');
-name('duandian');
-console.log('end');
+hello()

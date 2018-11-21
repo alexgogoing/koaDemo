@@ -1,4 +1,4 @@
-let error = async function(ctx, next){
+export default async function(ctx, next){
     try{
         await next();
     }catch(err){
@@ -6,5 +6,3 @@ let error = async function(ctx, next){
         ctx.response.body = err;
     }
 }
-
-module.exports = error;

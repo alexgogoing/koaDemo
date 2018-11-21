@@ -1,10 +1,9 @@
-let helloService = require('../service/hello');
-let error = require('../model/error');
-
+import helloService from '../service/hello';
+import {NormalError} from '../model/error';
 import {Controller, Request, RequestMethod} from '../../lib/decorator';
 
 @Controller({prefix: '/hello'})
-export default class Hello{
+class Hello{
     @Request({url: '/getUser', method: RequestMethod.GET})
     async getUser(ctx, next) {
         try{
@@ -12,7 +11,8 @@ export default class Hello{
             let result = await helloService.findUserData(username);
             ctx.body = result;
         }catch(e){
-            ctx.throw(new error.NormalError());
+            console.log(e);
+            ctx.throw(new NormalError());
         }
     }
 
@@ -25,3 +25,5 @@ export default class Hello{
         ctx.body = result;
     }
 }
+
+export default Hello;
